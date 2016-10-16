@@ -28,6 +28,7 @@ namespace StrategyGame.Controllers.Sprites
         public BaseSpriteController(string parentName)
         {
             this.ObjectParent = new GameObject(parentName);
+            this.ObjectParent.transform.SetParent(WorldController.Instance.transform);
             this.ObjectGameObjectMap = new Dictionary<T, GameObject>();
         }
 

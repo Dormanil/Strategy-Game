@@ -27,6 +27,19 @@ namespace StrategyGame.Controllers
         private TileSpriteController tileSpriteController;
 
         /// <summary>
+        /// Initialises a new instance of the <see cref="WorldController"/> class.
+        /// </summary>
+        public WorldController()
+        {
+            Instance = this;
+        }
+
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        public static WorldController Instance { get; private set; }
+
+        /// <summary>
         /// Runs when the game starts.
         /// </summary>
         public void Start()
