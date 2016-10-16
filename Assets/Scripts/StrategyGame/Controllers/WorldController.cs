@@ -12,8 +12,6 @@ using UnityEngine;
 
 namespace StrategyGame.Controllers
 {
-    using System.Collections.Generic;
-
     using StrategyGame.Controllers.Sprites;
 
     using StrategyGame.World;
@@ -24,9 +22,9 @@ namespace StrategyGame.Controllers
     public class WorldController : MonoBehaviour
     {
         /// <summary>
-        /// The tile/game object dictionary.
+        /// The tile sprite controller.
         /// </summary>
-        private static Dictionary<Tile, GameObject> tileGameObjectDictionary = new Dictionary<Tile, GameObject>();
+        private TileSpriteController tileSpriteController;
 
         /// <summary>
         /// Runs when the game starts.
@@ -55,7 +53,7 @@ namespace StrategyGame.Controllers
 
             Map debugMap = Debug.TestNumberOne.InitialiseGameState();
 
-            new TileSpriteController(debugMap);
+            this.tileSpriteController = new TileSpriteController(debugMap);
         } 
     }
 }
