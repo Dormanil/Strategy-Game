@@ -56,15 +56,6 @@ namespace StrategyGame.Controllers
             Map debugMap = Debug.TestNumberOne.InitialiseGameState();
 
             new TileSpriteController(debugMap);
-
         } 
-        /// <summary>
-        /// The tile changed callback. It gets called, whenever a tile gets changed.
-        /// </summary>
-        /// <param name="tile">The tile that got changed.</param>
-        private void TileChanged(Tile tile)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
